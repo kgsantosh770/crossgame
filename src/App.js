@@ -12,7 +12,6 @@ function App() {
   ];
 
   function updatedBoxState(boxNumber) {
-    console.log('changing state');
     setBoxState(prevState => {
       const newState = [...prevState];
       newState[boxNumber] = turn;
@@ -64,7 +63,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{winner.player !== null ? `Winner: ${winner.player}` : `Turn: Player ${turn}`}</h1>
+      <h1>
+        {
+          boxState.includes(null) ?
+            winner.player !== null ? `Winner: ${winner.player}` : `Turn: Player ${turn}` :
+            winner.player === null ? `Game Draw` : `Winner: ${winner.player}`
+        }</h1>
       <div className={`game-box ${turn === 'O' ? 'disable' : ''}`}>
         {
           boxState.map((value, index) => {
