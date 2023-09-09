@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.game-box {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-box button {
+  min-height: 7rem;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.game-box.disabled {
+  pointer-events: none;
+}
+
+.game-box button p {
+  width: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.game-box button.final p {
+  border-radius: 100px;
+  border: 1px solid green;
+}
