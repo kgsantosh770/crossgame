@@ -34,7 +34,7 @@ h1 {
   font-size: 1.5rem;
 }
 
-.game-box.disabled {
+.game-box.disable {
   pointer-events: none;
 }
 
